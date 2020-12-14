@@ -16,6 +16,6 @@ spec:
         values:
         - darwin
         - linux
-    uri: https://github.com/scraly/kubectl-season/archive/v0.0.1.tar.gz
-    sha256: 11e016d3bbb7bdaaef1fb8aceff2b55f100bc90a35de483d5c7d4e9c73644701
-    bin: kubectl-season-0.0.1/kubectl-season
+    uri: https://github.com/scraly/kubectl-season/archive/v0.0.2.tar.gz
+    sha256: 4294d4696d38a46a72de94e41ede2f50a1ed5a55c3f67d714daff33e49f3518c
+    bin: kubectl-season-0.0.2/kubectl-season
