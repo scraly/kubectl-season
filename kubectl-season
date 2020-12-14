@@ -21,43 +21,39 @@
 
 # CONSTS
 ## Select emoji randomly
-FALL_EMOJIS=(🍂 🍊 🌰 🥮 🥧 ☕ 🎃)
-HALLOWEEN_EMOJIS=(🎃 👻 🧟 🧛 🕷 🧙 💀 ☠ 😈)
-XMAS_EMOJIS=(🎄 🎁 🎅 🦌 🍪 ☃️ ❄️ 🌟 🤶)
-WINTER_EMOJIS=(🥶 🥨 🏂 🌲 ❄️ ☃️ 🎿 🧤 ☔)
-EASTER_EMOJIS=(🐇 🐣 🍫 🥚 🔔 🧺 🌼 🐝)
-SUMMER_EMOJIS=(😎 🏄 🏊 🌴 🍹 ☀️ 👕 🥵)
+# FALL_EMOJIS=(🍂 🍊 🌰 🥮 🥧 ☕ 🎃)
+# HALLOWEEN_EMOJIS=(🎃 👻 🧟 🧛 🕷 🧙 💀 ☠ 😈)
+# XMAS_EMOJIS=(🎄 🎁 🎅 🦌 🍪 ☃️ ❄️ 🌟 🤶)
+# WINTER_EMOJIS=(🥶 🥨 🏂 🌲 ❄️ ☃️ 🎿 🧤 ☔)
+# EASTER_EMOJIS=(🐇 🐣 🍫 🥚 🔔 🧺 🌼 🐝)
+# SUMMER_EMOJIS=(😎 🏄 🏊 🌴 🍹 ☀️ 👕 🥵)
 
 NOW=`date +%m`
 
 case $NOW in
 
   1|2|3)
-    EMOJIS=$WINTER_EMOJIS
+    EMOJIS=(🥶 🥨 🏂 🌲 ❄️ ☃️ 🎿 🧤 ☔)
     ;;
 
   4|5)
-    EMOJIS=$EASTER_EMOJIS
+    EMOJIS=(🐇 🐣 🍫 🥚 🔔 🧺 🌼 🐝)
     ;;
 
   6|7|8)
-    EMOJIS=$SUMMER_EMOJIS
+    EMOJIS=(😎 🏄 🏊 🌴 🍹 ☀️ 👕 🥵)
     ;;
 
   9|10)
-    EMOJIS=$HALLOWEEN_EMOJIS
+    EMOJIS=(🎃 👻 🧟 🧛 🕷 🧙 💀 ☠ 😈)
     ;;
 
   11)
-    EMOJIS=$FALL_EMOJIS
+    EMOJIS=(🍂 🍊 🌰 🥮 🥧 ☕ 🎃)
     ;;
 
   12)
-    EMOJIS=$WINTER_EMOJIS
-    ;;
-
-  *)
-    EMOJIS=$EASTER_EMOJIS
+    EMOJIS=(🎄 🎁 🎅 🦌 🍪 ☃️ ❄️ 🌟 🤶)
     ;;
 
 esac
@@ -70,7 +66,6 @@ usage="Display seasonal emoji randomly just before resources name.${n}${n}Usage:
 
 # MAIN
 # Usage
-# if [[ "$1" == "" || "$1" == "-h" || "$1" == "--help" || "$#" > 1 ]]
 if [[ "$1" == "" || "$1" == "-h" || "$1" == "--help" ]]
 then
     echo "$usage" 
