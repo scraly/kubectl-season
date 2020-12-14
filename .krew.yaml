@@ -18,4 +18,4 @@ spec:
         - linux
     uri: https://github.com/scraly/kubectl-season/archive/v0.0.1.tar.gz
     sha256: 11e016d3bbb7bdaaef1fb8aceff2b55f100bc90a35de483d5c7d4e9c73644701
-    bin: kubectl-season
+    bin: kubectl-season-0.0.1/kubectl-season
