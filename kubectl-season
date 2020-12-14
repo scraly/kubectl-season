@@ -1,27 +1,67 @@
 #!/bin/bash
 
-##########################################################################
-# kubectl-season                                                         #
-#                                                                        #
-# Welcome in Season plugin for kubectl Kubernetes CLI                    #
-# which display randomly an emoji in the beginning of the resources name #
-#                                                                        #
-# Usage:                                                                 #
-# ./kubectl-season <resource_type>                                       #
-#                                                                        #
-# Example:                                                               #
-# ./kubectl-season pod                                                   #
-# NAME                        READY   STATUS    RESTARTS   AGE           #
-# 🎃 httpbin-c9cb9cbf6-r2gnc     1/1     Running   0          2d1h       #
-# 🎃 my-nginx-75897978cd-f28j9   1/1     Running   0          2d20h      #
-# 🎃 my-nginx-75897978cd-pt2dx   1/1     Running   0          43h        #
-# 🎃 my-nginx-75897978cd-w2bcg   1/1     Running   0          42h        #
-# 🎃 traefik-85854f965f-pb6j2    1/1     Running   1          137m       #
-##########################################################################
+##################################################################################
+# kubectl-season                                                                 #
+#                                                                                #
+# Welcome in Season plugin for kubectl Kubernetes CLI                            #
+# which display randomly a seasonal emoji in the beginning of the resources name #
+#                                                                                #
+# Usage:                                                                         #
+# ./kubectl-season <resource_type>                                               #
+#                                                                                #
+# Example:                                                                       #
+# ./kubectl-season pod                                                           #
+# NAME                        READY   STATUS    RESTARTS   AGE                   #
+# 🎃 httpbin-c9cb9cbf6-r2gnc     1/1     Running   0          2d1h               #
+# 🎃 my-nginx-75897978cd-f28j9   1/1     Running   0          2d20h              #
+# 🎃 my-nginx-75897978cd-pt2dx   1/1     Running   0          43h                #
+# 🎃 my-nginx-75897978cd-w2bcg   1/1     Running   0          42h                #
+# 🎃 traefik-85854f965f-pb6j2    1/1     Running   1          137m               #
+##################################################################################
 
 # CONSTS
 ## Select emoji randomly
-EMOJIS=(🎄 🎁 🎅 🦌 🍪 ☃️ ❄️ 🌟 🤶)
+FALL_EMOJIS=(🍂 🍊 🌰 🥮 🥧 ☕ 🎃)
+HALLOWEEN_EMOJIS=(🎃 👻 🧟 🧛 🕷 🧙 💀 ☠ 😈)
+XMAS_EMOJIS=(🎄 🎁 🎅 🦌 🍪 ☃️ ❄️ 🌟 🤶)
+WINTER_EMOJIS=(🥶 🥨 🏂 🌲 ❄️ ☃️ 🎿 🧤 ☔)
+EASTER_EMOJIS=(🐇 🐣 🍫 🥚 🔔 🧺 🌼 🐝)
+SUMMER_EMOJIS=(😎 🏄 🏊 🌴 🍹 ☀️ 👕 🥵)
+
+NOW=`date +%m`
+
+case $NOW in
+
+  1|2|3)
+    EMOJIS=$WINTER_EMOJIS
+    ;;
+
+  4|5)
+    EMOJIS=$EASTER_EMOJIS
+    ;;
+
+  6|7|8)
+    EMOJIS=$SUMMER_EMOJIS
+    ;;
+
+  9|10)
+    EMOJIS=$HALLOWEEN_EMOJIS
+    ;;
+
+  11)
+    EMOJIS=$FALL_EMOJIS
+    ;;
+
+  12)
+    EMOJIS=$WINTER_EMOJIS
+    ;;
+
+  *)
+    EMOJIS=$EASTER_EMOJIS
+    ;;
+
+esac
+
 SELECTED_EMOJI=${EMOJIS[$(( ( RANDOM % ${#EMOJIS[@]} ) ))]};
 
 ## Usage
