@@ -9,7 +9,7 @@
 
 ## General
 
-`season` is a kubectl plugin that add a random sesonal (halloween, christmas, easter...) emoji before your Kubernetes resources.
+`season` is a kubectl plugin that add a random seasonal (halloween, christmas, easter...) emoji before your Kubernetes resources.
 It is written in BASH.
 
 ## Install
@@ -21,7 +21,7 @@ This plugin is available through [krew](https://krew.dev).
 1. [Install Krew](https://github.com/GoogleContainerTools/krew) plugin manager for kubectl.
 2. Add scraly's custom index `kubectl krew index add scraly https://github.com/scraly/krew-index`
 3. Install the plugin `kubectl krew install scraly/season`
-4. Run `kubectl krew install season`
+4. Run `kubectl season`
 5. Update plugin with `kubectl krew upgrade scraly/season`
 
 ### Binary
