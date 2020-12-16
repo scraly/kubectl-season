@@ -5,7 +5,7 @@ metadata:
 spec:
   homepage: https://github.com/scraly/kubectl-season
   shortDescription: Display seasonal emoji randomly before resources name
-  version: v0.0.2
+  version: v0.0.3
   description: |
     This plugin allows you to add randomly a seasonal (halloween, christmas, easter...) emoji just before the resources name. It's a special seasonal mode.
   platforms:
@@ -16,6 +16,6 @@ spec:
         values:
         - darwin
         - linux
-    uri: https://github.com/scraly/kubectl-season/archive/v0.0.2.tar.gz
+    uri: https://github.com/scraly/kubectl-season/archive/v0.0.3.tar.gz
     sha256: 4294d4696d38a46a72de94e41ede2f50a1ed5a55c3f67d714daff33e49f3518c
-    bin: kubectl-season-0.0.2/kubectl-season
+    bin: kubectl-season-0.0.3/kubectl-season
