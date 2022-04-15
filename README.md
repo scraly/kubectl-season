@@ -1,7 +1,7 @@
 # `kubectl-season` - kubectl plugin seasonal mode
 
 [![Twitter](https://img.shields.io/badge/twitter-@scraly-blue.svg)](http://twitter.com/scraly)
-[![GitHub release](https://img.shields.io/github/release/scraly/kubectl-halloween.svg)](https://github.com/scraly/kubectl-halloween/releases)
+[![GitHub release](https://img.shields.io/github/release/scraly/kubectl-season.svg)](https://github.com/scraly/kubectl-season/releases)
 
 <p align="center">
     <img src="assets/logo.png" alt="kubectl-season" width="30%">
