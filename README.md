@@ -59,6 +59,30 @@ $ kubectl season po, deploy
 🎃 deployment.apps/traefik    1/1     1            1           7d
 ```
 
+## Release
+
+1. Tag with a new version
+
+
+```
+git tag v0.0.5
+git push --tags
+```
+
+2. GitHub will create assets in .zip and .tar.gz
+
+3. Display the sha256 checksum
+
+Download the tar.gz and then execute the following command:
+
+```
+sha256sum kubectl-season-0.0.5.tar.gz
+```
+
+4. Edit `krew.yml` file with the new version and the sha256
+
+5. Push it into https://github.com/scraly/krew-index/blob/main/plugins/season.yaml
+
 ## Changelog
 
 See the [CHANGELOG](CHANGELOG.md) file for details.
