@@ -1,2 +1,2 @@
-image:
-  file: .gitpod.Dockerfile
+tasks:
+  - init: brew install goreleaser/tap/goreleaser
