@@ -38,7 +38,7 @@ due to the enforced naming convention for plugins by `kubectl`. More on this [he
 
 ```
 $ kubectl season deploy                                                                                                                        
-NAME       READY   UP-TO-DATE   AVAILABLE   AGE
+   NAME       READY   UP-TO-DATE   AVAILABLE   AGE
 🧟 httpbin    1/1     1            1           26h
 🧟 my-nginx   3/3     3            3           44h
 🧟 traefik    3/3     3            3           6d
@@ -46,14 +46,14 @@ NAME       READY   UP-TO-DATE   AVAILABLE   AGE
 
 ```
 $ kubectl season po, deploy 
-NAME                            READY   STATUS    RESTARTS   AGE
+   NAME                            READY   STATUS    RESTARTS   AGE
 🎃 pod/httpbin-c9cb9cbf6-r2gnc     1/1     Running   0          2d2h
 🎃 pod/my-nginx-75897978cd-f28j9   1/1     Running   0          2d21h
 🎃 pod/my-nginx-75897978cd-pt2dx   1/1     Running   0          44h
 🎃 pod/my-nginx-75897978cd-w2bcg   1/1     Running   0          43h
 🎃 pod/traefik-85854f965f-pb6j2    1/1     Running   1          174m
 
-NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+   NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
 🎃 deployment.apps/httpbin    1/1     1            1           2d2h
 🎃 deployment.apps/my-nginx   3/3     3            3           2d21h
 🎃 deployment.apps/traefik    1/1     1            1           7d
