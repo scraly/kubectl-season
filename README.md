@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/scraly/kubectl-halloween.svg)](https://github.com/scraly/kubectl-halloween/releases)
 
 <p align="center">
-    <img src="assets/logo.png" alt="kubectl-season" width=96>
+    <img src="assets/logo.png" alt="kubectl-season" width="30%">
 </p>
 
 ## General
