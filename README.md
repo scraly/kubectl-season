@@ -22,7 +22,7 @@ This plugin is available through [krew](https://krew.dev).
 2. Add scraly's custom index `kubectl krew index add scraly https://github.com/scraly/krew-index`
 3. Install the plugin `kubectl krew install scraly/season`
 4. Run `kubectl season`
-5. Update plugin with `kubectl krew upgrade scraly/season`
+5. Update plugin with `kubectl krew upgrade season`
 
 ### Binary
 
